@@ -26,3 +26,35 @@ Sign up here: https://tavily.com/
 
 3. (Optional) Check Your Microphone
 Since we will be building voice features, please ensure your laptop’s microphone is working.
+
+
+# Environment Setup Instructions
+
+## Prerequisites
+- Install Miniconda or Anaconda from https://docs.conda.io/en/latest/miniconda.html
+
+## Step 1: Create a new conda environment
+conda create --name myproject python=3.11
+
+## Step 2: Activate the environment
+conda activate myproject
+
+## Step 3: Install required packages
+conda install numpy pandas matplotlib scikit-learn jupyter flask
+
+## Step 4: (Optional) Install additional packages via pip if not available on conda
+pip install <package-name>
+
+## Step 5: Verify the installation
+python -c "import numpy; import pandas; import matplotlib; import sklearn; import flask; print('All packages installed successfully!')"
+
+## To deactivate the environment when done
+conda deactivate
+
+## To remove the environment if needed
+conda remove --name myproject --all
+
+## Notes
+- Always activate the environment before running the project: conda activate myproject
+- To export the environment for sharing: conda env export > environment.yml
+- To recreate the environment from the file: conda env create -f environment.yml
